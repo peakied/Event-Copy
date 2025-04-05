@@ -8,8 +8,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon Server.js",
-    "start": "node Server.js",
-    "build": "mkdir -p public && cp -r Api/* public/"
+    "start": "node Server.js"
   },
   "keywords": [],
   "author": "",
