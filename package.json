@@ -1,0 +1,25 @@
+{
+  "name": "event",
+  "version": "1.0.0",
+  "main": "index.js",
+  "engines": {
+    "node": ">=16.x"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon Server.js",
+    "start": "node Server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "argon2": "^0.41.1",
+    "axios": "^1.8.4",
+    "cora": "^0.1.0",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "nodemon": "^3.1.9"
+  }
+}
