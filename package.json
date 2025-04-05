@@ -5,22 +5,11 @@
   "engines": {
     "node": ">=16.x"
   },
-  "build" : [
-    {
-      "src": "Server.js",
-      "use": "@vercel/node"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "/"
-    }
-  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon Server.js",
-    "start": "node Server.js"
+    "start": "node Server.js",
+    "build": "echo \"No build step defined\""
   },
   "keywords": [],
   "author": "",
