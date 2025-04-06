@@ -1,21 +1,23 @@
 const express = require('express');
-const serverless = require('serverless-http');
 const cors = require('cors');
-const { createEvent, getEvents, deleteEvent } = require('./Event');
-const { saveQueue, getQueues } = require('./Queue');
+const { createEvent, getEvents, deleteEvent} = require('./Api/Event');
+const { saveQueue, getQueues } = require('./Api/Queue');
 
 const app = express();
+const port = 3000;
 
 app.use(cors());
 app.use(express.json());
 
-// Define routes
+app.listen(port, () => {
+  console.log(`Server is running at http://localhost:${port}`);
+});
+
+
 app.post('/api/event', createEvent);
 app.get('/api/events', getEvents);
 app.delete('/api/event', deleteEvent);
 
+
 app.post('/api/queue', saveQueue);
 app.get('/api/queue', getQueues);
-
-// Export the app wrapped in serverless-http
-module.exports.handler = serverless(app);
